@@ -34,7 +34,7 @@ public class LectorFichero {
     public static void main(String[] args) {
         System.out.println("Ejercicio 1");
 
-        List<List<String>> datosPersonas = leerFichero(Path.of("src/fichero.txt"));
+        List<List<String>> datosPersonas = leerFichero(Path.of("src/main/resources/fichero.txt"));
         List<Optional<Persona>> personas = new ArrayList<>();
         datosPersonas.forEach(d -> {
             String nombre = d.get(0);
@@ -88,7 +88,7 @@ public class LectorFichero {
                 datos.add(datosLinea);
             }
         }catch (Exception e){
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         }
         return  datos;
     }
